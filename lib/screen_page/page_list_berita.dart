@@ -39,7 +39,7 @@ class _PageListBeritaState extends State<PageListBerita> {
     try {
       // Berhasil
       http.Response response = await http.get(
-        Uri.parse("http://10.126.15.132/edukasi_server/getBerita.php"),
+        Uri.parse("http://192.168.100.44/edukasi_server/getBerita.php"),
       );
 
       return modelBeritaFromJson(response.body).data;
@@ -144,7 +144,7 @@ class _PageListBeritaState extends State<PageListBerita> {
                                     padding: EdgeInsets.all(4),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(10),
-                                      child: Image.network('http://10.126.15.132/edukasi_server/gambar_berita/${data.gambar}',
+                                      child: Image.network('http://192.168.100.44/edukasi_server/gambar_berita/${data.gambar}',
                                         fit: BoxFit.fill,
                                       ),
                                     )
